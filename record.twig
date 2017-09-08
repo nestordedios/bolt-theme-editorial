@@ -1,0 +1,27 @@
+{% extends 'partials/_master.twig' %}
+
+{% block main %}
+
+    <!-- Content -->
+        <section>
+            <header class="main">
+                <h1>{{ record.title }}</h1>
+            </header>
+
+            <span class="image main"><img src="{{ record.image|thumbnail(1417, 461) }}" alt="" /></span>
+
+            {{ record.teaser }}
+
+            <hr class="major" />
+
+            {{ record.body }}
+
+            <hr class="major" />
+
+            {{ record.body }}
+
+            <hr class="major" />
+
+        </section>
+
+{% endblock main %}

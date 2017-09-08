@@ -1,0 +1,47 @@
+<!-- Search -->
+    <section id="search" class="alt">
+        <form method="get" action="{{ path('search') }}" id="searchform-inline" enctype="text/plain">
+            <input type="text" value="{% if search is defined %}{{ search|escape }}{% endif %}" name="search" id="query" placeholder="Search" />
+        </form>
+    </section>
+
+<!-- Menu -->
+    <nav id="menu">
+        <header class="major">
+            <h2>Menu</h2>
+        </header>
+        {{ menu('main', 'partials/_sub_menu.twig') }}
+    </nav>
+
+<!-- Section -->
+{% setcontent asideEntries = 'entries/random/3' %}
+    <section>
+        <header class="major">
+            <h2>Ante interdum</h2>
+        </header>
+        <div class="mini-posts">
+            {% for asideEntry in asideEntries %}
+
+            <article>
+                <a href="{{ asideEntry.link }}" class="image"><img src="{{ asideEntry.image|thumbnail(336, 203) }}" alt="" /></a>
+                <p>{{ asideEntry.teaser|excerpt(80) }}</p>
+            </article>
+
+            {% endfor %}
+        </div>
+    </section>
+
+<!-- Section -->
+{% setcontent contactPage = 'page/1' %}
+    <section>
+        <header class="major">
+            <h2>{{ contactPage.title }}</h2>
+        </header>
+        {{ contactPage.teaser }}
+        <ul class="contact">
+            <li class="fa-envelope-o"><a href="#">information@untitled.tld</a></li>
+            <li class="fa-phone">(000) 000-0000</li>
+            <li class="fa-home">1234 Somewhere Road #8254<br />
+            Nashville, TN 00000-0000</li>
+        </ul>
+    </section>

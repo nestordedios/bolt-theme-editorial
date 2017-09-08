@@ -1,0 +1,49 @@
+{% set link = pager.makelink() %}
+
+{% if pager.totalpages > 1 %}
+
+    <ul class="pagination">
+
+        {# 'first' and 'prev' #}
+        {% if pager.current > 1 %}
+            <li><a href="{{link}}{{pager.current-1}}" class="button">&#8592;</a></li>
+        {% else %}
+            <li><a class="button disabled">&#8592;</a></li>
+        {% endif %}
+
+        {% if pager.current > 1 %}
+            <li><a href="{{link}}{{1}}" class="button">&laquo;</a></li>
+        {% else %}
+            <li><a href="{{link}}{{pager.current-1}}" class="button disabled">&laquo;</a></li>
+        {% endif %}
+
+        {# start with '..' if there are more than surr+1 before currentpage.. #}
+        {% if pager.current > surr+2 %}
+            <li><a class="page disabled">…</a></li>
+        {% endif %}
+
+        {% for i in max(1, pager.current-surr)..min(pager.current+surr, pager.totalpages) %}
+            <li><a href="{{link}}{{i}}" class='page {% if i==pager.current %}active{%endif%}' {% if i != 1 %}{% endif %}>{{i}}</a></li>
+        {% endfor %}
+
+        {# end with '..' if there are more than surr+1 after currentpage.. #}
+        {% if pager.current < (pager.totalpages - surr - 1) %}
+            <li><a class="page disabled">…</a></li>
+        {% endif %}
+
+        {# 'next' and 'last' #}
+        {% if pager.current < pager.totalpages-surr %}
+            <li><a href="{{link}}{{pager.totalpages}}" class="button">&raquo;</a></li>
+        {% else %}
+            <li><a href="{{link}}{{pager.current-1}}" class="button">&raquo;</a></li>
+        {% endif %}
+
+        {% if pager.current < pager.totalpages and class!="narrow" %}
+            <li><a href="{{link}}{{pager.current+1}}" class="button">&#8594;</a></li>
+        {% else %}
+            <li><a href="{{link}}{{pager.current+1}}" class="button disabled">&#8594;</a></li>
+        {% endif %}
+
+    </ul>
+
+{% endif %}
