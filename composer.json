@@ -1,0 +1,30 @@
+{
+    "name": "nestordedios/bolt-theme-editorial",
+    "description": "Editorial - A fully responsive site theme.",
+    "type": "bolt-theme",
+    "keywords": ["theme", "editorial", "responsive", "template", "simple", "elegant"],
+    "require": {
+        "bolt/bolt": "^3.0"
+    },
+    "license": "CCA (Creative Commons Attribution)",
+    "authors": [
+        {
+            "name": "Nestor de Dios Fernandez",
+            "email": "nestordedios@outlook.es"
+        },
+        {
+            "name": "HTML5 UP",
+            "homepage": "www.html5up.net"
+        }
+    ],
+    "extra": {
+        "bolt-screenshots": [
+            "screenshots/homepage-desktop-top.PNG",
+            "screenshots/homepage-desktop.png",
+            "screenshots/homepage-tablet-portrait.png",
+            "screenshots/homepage-mobile-open-menu.png",
+            "screenshots/record-page-desktop.png",
+            "screenshots/record-page-mobile-close-menu.png"
+        ]
+    }
+}
