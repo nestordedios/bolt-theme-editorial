@@ -1,5 +1,7 @@
 ## Editorial by HTML5 UP
 
+![Preview](screenshots/homepage-desktop-top.PNG)
+
 ### Introduction
 
 This is [Editorial by HTML5 UP](https://html5up.net/editorial) adapted for Bolt! See `README.txt` for notes by the original author of this theme.
