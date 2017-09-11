@@ -1,4 +1,4 @@
-## bolt-theme-editorial by TEMPLATED
+## Editorial by HTML5 UP
 
 ### Introduction
 
