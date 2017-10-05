@@ -65,3 +65,11 @@ thumbnails:
         myimageformat:
             size: [400,300]
             cropping: crop
+
+# Social media links for the theme
+# Font Awesome icons are used. The one you need might be available here http://fontawesome.io/icons/#brand.
+social_media:
+    twitter: 
+        link: https://twitter.com/BoltCM
+        label: Twitter
+        icon: fa-twitter
