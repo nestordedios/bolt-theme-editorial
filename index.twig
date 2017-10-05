@@ -11,9 +11,9 @@
 				<div class="content">
 					<header>
 						<h1>{{ entry.title }}</h1>
-						<p>{{ entry.title }}</p>
+						<p>{{ entry.teaser }}</p>
 					</header>
-					{{ entry.teaser }}
+					<p>{{ entry.body|excerpt('250') }}</p>
 					<ul class="actions">
 						<li><a href="{{ entry.link }}" class="button big">Read More</a></li>
 					</ul>
