@@ -1,0 +1,33 @@
+{% extends 'partials/_master.twig' %}
+{% use 'partials/_sub_fields.twig' %}
+
+{% setcontent record = 'blocks/404-not-found' %}
+
+{% block main %}
+
+    {# special case: See if we actually want the Styleguide. #}
+    {% if global.request.server.get('REQUEST_URI') == '/styleguide' %}
+        {{ include('styleguide.twig') }}
+    {% else %}
+        <!-- Content -->
+            <section>            
+                <header class="main">
+                    <h1>{{ record.title|default('404 not found') }}</h1>
+                </header>
+
+                {% if record %}
+                    {{ block('sub_fields') }}
+                {% else %} #}
+                    <p>The requested page was not found.</p>
+                    <h5>Add a Blocks record with slug '404-not-found' to customize this message. </h5>
+                    <p>If it's not showing up here, doublecheck that the <tt>slug</tt> is correct, and that the Block is published.</p>
+                {% endif %}
+            </section>
+
+    {% endif %}    
+        
+{% endblock main %}
+
+
+
+            
