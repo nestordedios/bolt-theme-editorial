@@ -3,9 +3,9 @@
 {% block main %}
 
 	<!-- Banner -->
-	{% setcontent lastEntry = 'entries/latest/1' %}
+	{% setcontent entries = 'entries/latest/7' %}
 
-		{% for entry in lastEntry %}
+		{% for entry in entries|slice(0, 1) %}
 
 			<section id="banner">
 				<div class="content">
@@ -50,14 +50,13 @@
 		</section>
 
 	<!-- Section -->
-	{% setcontent entries = 'entries/latest/6' %}
 		<section>
 			<header class="major">
 				<h2>Ipsum sed dolor</h2>
 			</header>
 			<div class="posts">
 
-				{% for entry in entries %}
+				{% for entry in entries|slice(1, 7) %}
 
 					<article>
 						<a href="{{ entry.link }}" class="image"><img src="{{ entry.image|thumbnail(403, 248) }}" alt="" /></a>
