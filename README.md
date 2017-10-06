@@ -14,7 +14,7 @@ This is [Editorial by HTML5 UP](https://html5up.net/editorial) adapted for Bolt!
 
 If you want to build extra templates reusing the components of this theme you can check the style guide. There are two options for doing this:
 
-1. Assign `styleguide.twig` template to one of your records and go to that record page. Then you will get a detail page with all components included in this theme.
+1. Go to `/styleguide` to see it in the browser.
 2. You can look directly into the HTML in the `styleguide.twig` template.
 
 Don't forget to clear yor cache every time you make changes.
