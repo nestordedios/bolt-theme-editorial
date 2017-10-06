@@ -7,9 +7,11 @@
             <h1>{{ record.title }}</h1>
             </header>
 
-            {% set fieldtype = record.fieldtype('image') %}
-            {% set value = record.get('image') %}
-            {{ block('common_fields', 'partials/_sub_fields.twig') }}
+            {% if record.image is not empty %}
+                <span class="image main">
+                    {{ record.image|showimage('1154', '375') }}
+                </span>
+            {% endif %}
 
             {# Output all fields(excluding image field already output before) in the order as defined in the contenttype.
             To change the generated html and configure the options, see:
