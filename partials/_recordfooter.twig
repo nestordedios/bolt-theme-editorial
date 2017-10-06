@@ -2,11 +2,11 @@
 <p class="meta">
     {% if record.editlink() %}
         <span class="edit-link"><a href="{{ record.editlink() }}"><strong>Edit</strong></a></span> -
+        {{ __('general.phrase.written-by-on', {
+            '%name%': record.user.displayname|default(__('Unknown')),
+            '%date%': record.datepublish|localedatetime("%A %B %e, %Y")
+        }) }}
     {% endif %}
-    {{ __('general.phrase.written-by-on', {
-        '%name%': record.user.displayname|default(__('Unknown')),
-        '%date%': record.datepublish|localedatetime("%A %B %e, %Y")
-    }) }}
 </p>
 
 {% if extended|default() %}
