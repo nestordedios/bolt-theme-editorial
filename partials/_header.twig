@@ -1,6 +1,7 @@
 <!-- Header -->
     <header id="header">
         <a href="{{ url('homepage') }}" class="logo"><img src="{{ asset('images/logo-black.svg') }}"/></a>
+        <p class="tagline">THE INDEPENDENT STUDENT NEWSPAPER AT DREXEL UNIVERSITY SINCE 1926</p>
         <ul class="icons">
             {% for socialMedia in theme.get('social_media') %}
                 {% if socialMedia.link %}
