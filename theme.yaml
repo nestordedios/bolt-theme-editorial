@@ -69,7 +69,23 @@ thumbnails:
 # Social media links for the theme
 # Font Awesome icons are used. The one you need might be available here http://fontawesome.io/icons/#brand.
 social_media:
+    facebook:
+        link: https://www.facebook.com/drexeltriangle/
+        label: facebook
+        icon: fa-facebook
+    instagram:
+        link: https://www.instagram.com/drexeltriangle/
+        label: instagram
+        icon: fa-instagram
     twitter: 
-        link: https://twitter.com/BoltCM
+        link: https://twitter.com/drexeltriangle
         label: Twitter
         icon: fa-twitter
+    youtube:
+        link: https://www.youtube.com/user/DrexelTriangle
+        label: youtube
+        icon: fa-youtube
+    email:
+        link: https://thetriangle.us2.list-manage.com/subscribe/post?u=6eb4aab81745d3436b16a6181&id=7389750c95
+        label: email
+        icon: fa-envelope
