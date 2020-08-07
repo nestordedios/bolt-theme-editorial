@@ -2,8 +2,10 @@
     <header id="header">
         <a href="{{ url('homepage') }}" class="logo"><strong>{{ config.get('general/sitename') }}</strong></a>
         <ul class="icons">
-            {% for socialMedia in theme.social_media if socialMedia.link %}
-                <li><a href="{{ socialMedia.link }}" class="icon {{ socialMedia.icon }}"><span class="label">{{ socialMedia.label }}</span></a></li>
+            {% for socialMedia in theme.get('social_media') %}
+                {% if socialMedia.link %}
+                    <li><a href="{{ socialMedia.link }}" class="icon {{ socialMedia.icon }}"><span class="label">{{ socialMedia.label }}</span></a></li>
+                {% endif %}
             {% endfor %}
         </ul>
     </header>
