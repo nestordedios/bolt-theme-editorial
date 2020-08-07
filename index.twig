@@ -3,7 +3,7 @@
 {% block main %}
 
 	<!-- Banner -->
-	{% setcontent entries = 'entries/latest/7' %}
+	{% setcontent entries = 'entries' latest limit 7 %}
 
 		{% for entry in entries|slice(0, 1) %}
 
