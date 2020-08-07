@@ -1,6 +1,6 @@
 <!-- Header -->
     <header id="header">
-        <a href="{{ url('homepage') }}" class="logo"><strong>{{ config.get('general/sitename') }}</strong></a>
+        <a href="{{ url('homepage') }}" class="logo"><img src="{{ asset('images/logo-black.svg') }}"/></a>
         <ul class="icons">
             {% for socialMedia in theme.get('social_media') %}
                 {% if socialMedia.link %}
