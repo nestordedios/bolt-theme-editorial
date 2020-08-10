@@ -2071,7 +2071,7 @@
 
 	body, input, select, textarea {
 		color: #7f888f;
-		font-family: "Open Sans", sans-serif;
+		font-family: "Crimson Text", sans-serif;
 		font-size: 13pt;
 		font-weight: 400;
 		line-height: 1.65;
@@ -2100,6 +2100,10 @@
 			}
 
 		}
+	
+	article {
+		font-family: 'Crimson Text', serif;
+	}
 
 	a {
 		-moz-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
@@ -2145,6 +2149,21 @@
 			color: inherit;
 			text-decoration: none;
 		}
+	
+	.content header h1, 
+	.content header h2, 
+	.content header h3, 
+	.content header h4, 
+	.content header h5, 
+	.content header h6,
+	article h1,
+	article h2,
+	article h3,
+	article h4,
+	article h5,
+	article h6 {
+		font-family: "Crimson Text", serif;
+	}
 
 	h1 {
 		font-size: 4em;
