@@ -16,7 +16,7 @@
     {% apply spaceless %}
     <li>
 
-        {% if item.submenu is defined and withsubmenus %}
+        {% if item.submenu is not null and withsubmenus %}
 
                 <span class="opener">Submenu</span>
                 <ul>
